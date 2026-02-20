@@ -1,6 +1,13 @@
        IDENTIFICATION DIVISION.
 
-       PROGRAM-ID. RPT1000.
+       PROGRAM-ID. RPT2000.
+		*---------------------------------------------------------------*
+		* PROGRAM NAME: RPT2000                                         *
+		* AUTHORs: Hayden Schmidt & Grant Peverett                      *
+		* DATE: 02/20/2026                                              *
+		* DESCRIPTION: Year-To-Date Sales Report with Change Columns    *
+		*---------------------------------------------------------------*
+
 
        ENVIRONMENT DIVISION.
 

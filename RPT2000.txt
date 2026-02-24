@@ -15,7 +15,7 @@
 
        FILE-CONTROL.
            SELECT CUSTMAST ASSIGN TO CUSTMAST.
-           SELECT SALESRPT ASSIGN TO SALESRPT.
+           SELECT RPT2000 ASSIGN TO RPT2000.
 
        DATA DIVISION.
 
@@ -35,7 +35,7 @@
            05  CM-SALES-LAST-YTD       PIC S9(5)V9(2).
            05  FILLER                  PIC X(87).
 
-       FD  SALESRPT
+       FD  RPT2000
            RECORDING MODE IS F
            LABEL RECORDS ARE STANDARD
            RECORD CONTAINS 130 CHARACTERS
@@ -100,6 +100,10 @@
            05  FILLER      PIC X(20)   VALUE "     LAST YTD       ".
            05  FILLER      PIC X(69)   VALUE SPACE.
 
+	   01  CALC-FIELDS.
+		   05  WS-CHANGE-AMOUNT     PIC S9(7)V99 VALUE ZERO.
+		   05  WS-CHANGE-PERCENT    PIC S9(3)V9  VALUE ZERO.
+
        01  CUSTOMER-LINE.
 		   05  CL-BRANCH-NUMBER     PIC 99.
 		   05  FILLER               PIC X(4) VALUE SPACE.
@@ -130,13 +134,13 @@
        000-PREPARE-SALES-REPORT.
 
            OPEN INPUT  CUSTMAST
-                OUTPUT SALESRPT.
+                OUTPUT RPT2000.
            PERFORM 100-FORMAT-REPORT-HEADING.
            PERFORM 200-PREPARE-SALES-LINES
                UNTIL CUSTMAST-EOF-SWITCH = "Y".
            PERFORM 300-PRINT-GRAND-TOTALS.
            CLOSE CUSTMAST
-                 SALESRPT.
+                 RPT2000.
            STOP RUN.
 
        100-FORMAT-REPORT-HEADING.

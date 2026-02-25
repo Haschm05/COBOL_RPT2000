@@ -27,8 +27,8 @@ The program then outputs the following information in a report:
 
 ## Output of the code running:
 
-<img src="https://github.com/Grantyy1/COBOL-UTIL2000/blob/main/assests/Output%20code%201.png" alt="Profile Picture" />
-<img src="https://github.com/Grantyy1/COBOL-UTIL2000/blob/main/assests/Output%20code%202.png" alt="Profile Picture" />
+<img width="553" height="340" alt="image" src="https://github.com/user-attachments/assets/161484a4-af00-4be4-b9d1-21348c0c0dec" />
+
 
 ---
 
